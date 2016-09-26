@@ -13,6 +13,8 @@ define(['ojs/ojcore','ojs/ojrouter'],
       self.router = oj.Router.rootInstance;
       self.router.configure({
           'home': {label: 'Home', isDefault: true},
+          'homechild_1': {label: 'Home Child 1'},
+          'homechild_2': {label: 'Home Child 2'},
           'starwars': {label: 'StarWars'}
       });
       oj.Router.defaults['urlAdapter'] = new oj.Router.urlParamAdapter();

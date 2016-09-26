@@ -15,6 +15,15 @@ define(['ojs/ojcore', 'knockout', 'jquery','appController'],
         }
         
         self.goChild1 = function() {
+            console.log('go child1');
+            var color = {color: 'green'};
+            app.router.store(color);
+            var routeState = app.router.getState('homechild_1');
+            console.log(routeState);
+            routeState.value = {key1: 'value1', key2: 'value2'};
+            console.log(routeState.value);
+            
+            
             app.router.go('homechild_1');           
         };
         self.goChild2 = function() {

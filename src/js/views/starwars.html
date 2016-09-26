@@ -8,8 +8,16 @@ and open the template in the editor.
     <div class="oj-hybrid-padding">
         <h3>StarWars</h3>
        <div>
-        To change the content of this section, you will make edits to
-        the starwars.html file located in the /js/views folder.
+           <div>
+                <select data-bind="ojComponent: {component: 'ojSelect', 
+                             options: characters,
+                             value: selectedVal,
+                             multiple: false,
+                             optionChange: characterSelected,
+                             placeholder: 'Select a Character',
+                             rootAttributes: {style:'max-width:20em'}}">
+                </select>
+           </div>    
      </div>
     </div>
 </html>

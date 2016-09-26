@@ -13,10 +13,22 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'appController'],
             };
             self.goHome = function() {
                 app.router.go('home');
-            }
+            };
             self.goHomeChild1 = function() {
                 app.router.go('homechild_1');
-            }
+            };
+//            self.handleActivated = function(info){
+//                var currentValue = app.router.currentValue();
+//                console.log("currentValue: " + JSON.stringify(currentValue));
+//                var routeState = app.router.currentState();
+//                var value = routeState.value;
+//                console.log("value: " + JSON.stringify(value));
+//                value.newKey = 'new value'; // call by reference....
+//                var data = app.router.retrieve();
+//                console.log("data: " + JSON.stringify(data));
+//                data.newKey = 'new value';
+//                app.router.store(data);
+//            };
         }
     return new HomeChild1ViewModel();
     }

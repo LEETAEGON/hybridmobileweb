@@ -18,6 +18,125 @@ and open the template in the editor.
                              rootAttributes: {style:'max-width:20em'}}">
                 </select>
            </div>    
+           
+            <div id="tabs" data-bind="ojComponent:{component: 'ojTabs'}">
+                    <!-- tab bar -->
+                <ul>
+                    <li><span>Summary</span></li>
+                    <li><span>Species</span></li>
+                    <li><span>Films</span></li>
+                    
+                </ul>
+
+                <!-- tab contents -->
+                <div id="tabs-1">
+                    <p>Summary Content</p>
+                    <div class="oj-form">
+                        <div class="oj-flex">
+                            <div class="oj-flex-item">
+                                <label for="Name">Name</label>
+                                <input id="Name" data-bind="ojComponent:
+                                {component: 'ojInputText', value:name, required: true}">
+                            </div>
+                        </div>
+                        <div class="oj-flex">
+                            <div class="oj-flex-item">
+                                <label for="Height">Height</label>
+                                <input id="Height" data-bind="ojComponent:
+                                {component: 'ojInputText', value:height, required: true}">
+                            </div>
+                        </div>
+                        <div class="oj-flex">
+                            <div class="oj-flex-item">
+                                <label for="Mass">Mass</label>
+                                <input id="Mass" data-bind="ojComponent:
+                                {component: 'ojInputText', value:mass, required: true}">
+                            </div>
+                        </div> 
+                        <div class="oj-flex">
+                            <div class="oj-flex-item">
+                                <label for="input">Birth Year</label>
+                                <input id="input" data-bind="ojComponent:
+                                {component: 'ojInputText', value:birth_year, required: true}">
+                            </div>
+                        </div>
+                        <div class="oj-flex">
+                            <div class="oj-flex-item">
+                                <label for="input">Gender</label>
+                                <input id="input" data-bind="ojComponent:
+                                {component: 'ojInputText', value:gender, required: true}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="tabs-2">
+                    <p>Species Content</p>
+                  
+                    <div class="oj-form">
+                        <div class="oj-flex">
+                            <div class="oj-flex-item">
+                                <label for="Name2">Name</label>
+                                <input id="Name2" data-bind="ojComponent:
+                                {component: 'ojInputText', value:speciesName, required: true}">
+                            </div>
+                        </div>
+                        <div class="oj-flex">
+                            <div class="oj-flex-item">
+                                <label for="input">Classification</label>
+                                <input id="input" data-bind="ojComponent:
+                                {component: 'ojInputText', value:classification, required: true}">
+                            </div>
+                        </div>
+
+                        <div class="oj-flex">
+                            <div class="oj-flex-item">
+                                <label for="input">Designation</label>
+                                <input id="input" data-bind="ojComponent:
+                                {component: 'ojInputText', value:designation, required: true}">
+                            </div>
+                        </div>
+                        <div class="oj-flex">
+                            <div class="oj-flex-item">
+                                <label for="input">Average Height</label>
+                                <input id="input" data-bind="ojComponent:
+                                {component: 'ojInputText', value:average_height, required: true}">
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+                
+                <div id="tabs-3">
+                    <p>Films Content</p>
+                    <ul id="listview" aria-label="list using array"
+                        data-bind="ojComponent: {component: 'ojListView',
+                        item: {template: 'film_template'},
+                        optionChange: fimlSelected,
+                        data: filmDataSource,
+                        selectionMode: 'single'}">
+                    </ul>                         
+                </div>
+                    
+            </div>
+  
      </div>
+        
     </div>
+    <script type="text/html" id="film_template">
+        <li>
+            <div class="oj-flex">
+                <b><span data-bind="text:$data['title']"></span></b>
+                </div>
+                <div class="oj-flex">
+                <span>Episode: <span data-bind="text:$data['episode_id']"></span> </span>
+                </div>
+                <div class="oj-flex">
+                <span>Director: <span data-bind="text:$data['director']"></span> </span>
+                </div>
+                <div class="oj-flex">
+                <span>Released: <span data-bind="text:$data['release_date']"></span> </span>
+            </div>
+        </li>
+    </script>
 </html>
+

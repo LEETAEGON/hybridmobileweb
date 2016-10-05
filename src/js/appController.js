@@ -15,8 +15,8 @@ define(['ojs/ojcore','ojs/ojrouter'],
           'home': {label: 'Home', isDefault: true},
           'homechild_1': {label: 'Home Child 1'},
           'homechild_2': {label: 'Home Child 2'},
-          'starwars': {label: 'StarWars'},
-          'filmdetail': {label: 'FilmDetail'}
+          'filmdetail': {label: 'FilmDetail'},
+          'starwars': {label: 'StarWars'}
       });
       oj.Router.defaults['urlAdapter'] = new oj.Router.urlParamAdapter();
 

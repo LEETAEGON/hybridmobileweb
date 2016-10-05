@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 
-define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojselectcombobox', 'ojs/ojtabs', 
+define(['ojs/ojcore', 'knockout', 'jquery', 'appController', 'ojs/ojselectcombobox', 'ojs/ojtabs', 
     'ojs/ojconveyorbelt', 'ojs/ojinputtext', 'ojs/ojlistview', 'ojs/ojarraytabledatasource'],
-    function(oj, ko, $) {
+    function(oj, ko, $, app) {
         
         function StarWarsViewModel() {
         var self = this;
@@ -32,7 +32,20 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojselectcombobox', 'ojs/ojtabs'
             console.log(ui);
             if(ui.option === "currentItem" && ui.value !== null) {
                 console.log("selected film url: " + ui.value);
+                
+               
             }
+             
+        }
+        
+        self.goChild1 = function() {
+            console.log('go child1');
+            var color = {color: 'green'};
+            app.router.store(color);
+            var routeState = app.router.getState('homechild_1');
+            console.log(routeState);
+            routeState.value = {key1: 'value1', key2: 'value2'};
+            console.log(routeState.value);
         }
         
 

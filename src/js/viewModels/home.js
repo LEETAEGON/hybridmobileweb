@@ -27,7 +27,7 @@ define(['ojs/ojcore', 'knockout', 'jquery','appController'],
             app.router.go('homechild_1');           
         };
         self.goChild2 = function() {
-            app.router.go('homechild_2');           
+            app.router.go('filmdetail');           
         };
         
     return new HomeViewModel();

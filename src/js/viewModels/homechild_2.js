@@ -6,7 +6,7 @@
 
 define(['ojs/ojcore', 'knockout', 'jquery', 'appController'],
     function(oj, ko, $, app) {
-        function HomeChild1ViewModel() {
+        function HomeChild2ViewModel() {
             var self = this;
             self.goBack = function() {
                 window.history.back();
@@ -30,6 +30,6 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'appController'],
 //                app.router.store(data);
 //            };
         }
-    return new HomeChild1ViewModel();
+    return new HomeChild2ViewModel();
     }
 );
